@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="TK"
+  id="myeclipse.1330578217218"
+  context-root="/TK"
+  j2ee-spec="5.0"
+  archive="TK.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

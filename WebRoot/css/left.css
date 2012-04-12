@@ -1,0 +1,67 @@
+@CHARSET "UTF-8";
+
+h2 {
+  margin-top: 0;
+}
+
+#wrapper {
+  width: 200px;
+  margin: 0 auto;
+}
+
+
+
+#content ul {
+  float: left;
+  display: block;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+
+
+#content a {
+  font-size: 1em;
+  color: #666;
+  text-decoration: none;
+  padding: 10px 0 5px;
+  display: block;
+  width: 250px;
+  height: 45px;
+  position: relative;
+  z-index: 2;
+}
+
+a img {
+  border: 0;
+  float: left;
+  margin: 0 10px;
+}
+
+.fader {
+  opacity: 0;
+  -moz-opacity: 0;
+  filter:alpha(opacity=0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+/*  background-color: #A4ADB7;点击呈现的颜色*/
+}
+
+a:hover img {
+  margin-left: 5px;
+}
+
+a strong {
+  display: block;
+  font-size: 18px;
+  color: #000;
+}
+
+.clear {
+  clear: left;
+}

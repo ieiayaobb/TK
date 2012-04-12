@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="dirst" namespace="/st" extends="struts-default">
+		<interceptors>
+			<interceptor name="LoginCheck" class="com.action.common.SessionCheckInterceptor" />
+			<interceptor-stack name="myStack">
+				<interceptor-ref name="LoginCheck">
+					<param name="sessionAttribute">login_user</param>
+					<param name="reloginResult">login</param>
+				</interceptor-ref>
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="myStack" />
+		<global-results>
+			<result name="login">/login.jsp</result>
+		</global-results>
+		<action name="gotoYhby" class="com.action.st.GotoYhby">
+			<result>yhby.jsp</result>
+		</action>
+		<action name="gotoyhbyDetail" class="com.action.st.GotoyhbyDetail">
+			<result>yhby_detail.jsp</result>
+		</action>
+		<action name="addyhbyDetail" class="com.action.st.AddyhbyDetail">
+			<result type="chain">
+				<param name="actionName">gotoyhbyDetail</param>
+			</result>
+		</action>
+		
+		<action name="gotoStjj" class="com.action.st.GotoStjj">
+			<result>stjj.jsp</result>
+		</action>
+	</package>
+</struts>
