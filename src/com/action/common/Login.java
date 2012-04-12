@@ -5,7 +5,6 @@ import org.hibernate.Session;
 import com.hibernate.HibernateSessionFactory;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
-
 public class Login extends ActionSupport {
 	private String name;
 	private String password;
