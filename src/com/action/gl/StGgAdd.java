@@ -1,7 +1,6 @@
 package com.action.gl;
 
 import java.util.List;
-
 import org.hibernate.Session;
 
 import com.hibernate.HibernateSessionFactory;
