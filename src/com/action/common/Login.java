@@ -1,9 +1,7 @@
 package com.action.common;
 
 import java.util.List;
-
 import org.hibernate.Session;
-
 import com.hibernate.HibernateSessionFactory;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
