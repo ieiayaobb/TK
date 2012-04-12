@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="dirgl" namespace="/gl" extends="struts-default">
+		<interceptors>
+			<interceptor name="LoginCheck" class="com.action.common.SessionCheckInterceptor" />
+			<interceptor-stack name="myStack">
+				<interceptor-ref name="LoginCheck">
+					<param name="sessionAttribute">login_user</param>
+					<param name="reloginResult">login</param>
+				</interceptor-ref>
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="myStack" />
+		<global-results>
+			<result name="login">/login.jsp</result>
+		</global-results>
+		<action name="gotoStJbxx" class="com.action.gl.GotoStJbxx">
+			<result>st/jbxx.jsp</result>
+		</action>
+		<action name="gotoStJbxxBj" class="com.action.gl.GotoStJbxx">
+			<result>st/jbxxbj.jsp</result>
+		</action>
+		<action name="gotoStGggl" class="com.action.gl.GotoStGggl">
+			<result>st/gggl.jsp</result>
+		</action>
+		<action name="stJbxxUpdate" class="com.action.gl.StJbxxUpdate">
+			<result type="chain">gotoStJbxx
+			</result>
+		</action>
+		<action name="stGgAdd" class="com.action.gl.StGgAdd">
+			<result type="chain">gotoStGggl
+			</result>
+		</action>
+	</package>
+</struts>
