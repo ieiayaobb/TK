@@ -4,12 +4,12 @@ import java.util.Iterator;
 import java.util.Map;
 import org.hibernate.Query;
 import org.hibernate.Session;
-
 import com.hibernate.HibernateSessionFactory;
 
 public class Page {
 	public Page() {
 		super();
+		System.out.print("测试");
 		// TODO Auto-generated constructor stub
 	}
 
