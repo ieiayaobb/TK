@@ -2,7 +2,6 @@ package com.servlet;
 
 import java.util.Iterator;
 import java.util.Map;
-
 import org.hibernate.Query;
 import org.hibernate.Session;
 
